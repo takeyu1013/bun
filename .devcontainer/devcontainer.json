@@ -5,8 +5,8 @@
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/base",
   "containerUser": "vscode",
-  "runArgs": ["--rm", "--name=${localWorkspaceFolderBasename}"],
 
+  "runArgs": ["--rm", "--name=${localWorkspaceFolderBasename}"],
   "mounts": [
     {
       "source": "${localEnv:HOME}/.gitconfig",
