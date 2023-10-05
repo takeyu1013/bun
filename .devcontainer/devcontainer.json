@@ -12,6 +12,11 @@
       "source": "${localEnv:HOME}/.gitconfig",
       "target": "/home/vscode/.gitconfig",
       "type": "bind"
+    },
+    {
+      "source": "${localEnv:HOME}/.git-credentials",
+      "target": "/home/vscode/.git-credentials",
+      "type": "bind"
     }
   ],
 
