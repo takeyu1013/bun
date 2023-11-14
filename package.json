@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lock": "cp package.json ~ && cd ~ && bun i && cp bun.lockb /workspaces/bun && cd /workspaces/bun",
+    "up": "bun x npm-check-updates -ui"
   },
   "dependencies": {
     "react": "^18",
