@@ -33,12 +33,12 @@
 
   // Configure tool-specific properties.
   "customizations": {
-    "settings": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true
-    },
     "vscode": {
-      "extensions": ["seatonjiang.gitmoji-vscode", "esbenp.prettier-vscode"]
+      "extensions": ["seatonjiang.gitmoji-vscode", "esbenp.prettier-vscode"],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+      }
     }
   }
 
