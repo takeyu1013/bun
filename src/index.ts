@@ -1,8 +1,9 @@
 import { Elysia } from "elysia";
 
 const app = new Elysia()
-  .get("/", ({ body }) => {
+  .get("/", ({ body, set }) => {
     console.log(body);
+    set.status = 200;
     return "Hello Elysia";
   })
   .get("/ping", () => "pong")
