@@ -6,10 +6,10 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "elysia": "0.7.29"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "1.0.14"
   },
   "module": "src/index.js"
 }
