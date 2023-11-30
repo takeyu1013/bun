@@ -2,7 +2,7 @@ import { Elysia, t } from "elysia";
 import { swagger } from "@elysiajs/swagger";
 
 const app = new Elysia()
-  // .use(swagger())
+  .use(swagger())
   .get("/", ({ body, set }) => {
     console.log(body);
     set.status = 200;
