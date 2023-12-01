@@ -10,12 +10,12 @@
   "mounts": [
     {
       "source": "${localEnv:HOME}/.gitconfig",
-      "target": "/home/vscode/.gitconfig",
+      "target": "/home/node/.gitconfig",
       "type": "bind"
     },
     {
       "source": "${localEnv:HOME}/.git-credentials",
-      "target": "/home/vscode/.git-credentials",
+      "target": "/home/node/.git-credentials",
       "type": "bind"
     }
   ],
