@@ -3,8 +3,8 @@
 {
   "name": "bun",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/base",
-  "containerUser": "vscode",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "containerUser": "node",
 
   "runArgs": ["--rm", "--name=${localWorkspaceFolderBasename}"],
   "mounts": [
