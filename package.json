@@ -7,12 +7,12 @@
     "ui": "bun x npm-check-updates -ui"
   },
   "dependencies": {
-    "@elysiajs/eden": "^0.7.4",
+    "@elysiajs/eden": "^0.7.6",
     "@elysiajs/swagger": "^0.7.4",
-    "elysia": "^0.7.29"
+    "elysia": "^0.7.30"
   },
   "devDependencies": {
-    "bun-types": "^1.0.14"
+    "bun-types": "^1.0.15"
   },
   "module": "src/index.js"
 }
