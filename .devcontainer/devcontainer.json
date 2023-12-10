@@ -29,7 +29,7 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "bun install --no-save",
+  // "postCreateCommand": "bun install --no-save",
 
   // Configure tool-specific properties.
   "customizations": {
