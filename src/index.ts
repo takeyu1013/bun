@@ -10,6 +10,17 @@ const app = new Elysia()
   })
   .get("/ping", () => "pong")
   .get("id/:id", ({ params: { id } }) => id)
+  .get("posts", ({ body }) => {
+    console.log(body);
+    return [
+      { id: "foo", title: "bar", description: "baz", link: "hoge" },
+    ] satisfies {
+      id: string;
+      title: string;
+      description: string;
+      link: string;
+    }[];
+  })
   .post("/mirror", ({ body }) => body, {
     body: t.Object({
       id: t.Number(),
