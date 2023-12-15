@@ -10,8 +10,7 @@ const app = new Elysia()
   })
   .get("/ping", () => "pong")
   .get("id/:id", ({ params: { id } }) => id)
-  .get("posts", ({ body }) => {
-    console.log(body);
+  .get("/posts", () => {
     return [
       { id: "foo", title: "bar", description: "baz", link: "hoge" },
     ] satisfies {
