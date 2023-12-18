@@ -1,17 +1,4 @@
-// import { edenTreaty } from "@elysiajs/eden";
 import type { MetaFunction } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
-
-export const loader = () => {
-  return [
-    { id: "foo", title: "bar", description: "baz", link: "hoge" },
-  ] satisfies {
-    id: string;
-    title: string;
-    description: string;
-    link: string;
-  }[];
-};
 
 export const meta: MetaFunction = () => {
   return [
@@ -21,16 +8,34 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const data = useLoaderData<typeof loader>();
-
   return (
-    <>
-      <h1>Posts</h1>
+    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+      <h1>Welcome to Remix</h1>
       <ul>
-        {data.map(({ id, title }) => {
-          return <li key={id}>{title}</li>;
-        })}
+        <li>
+          <a
+            target="_blank"
+            href="https://remix.run/tutorials/blog"
+            rel="noreferrer"
+          >
+            15m Quickstart Blog Tutorial
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://remix.run/tutorials/jokes"
+            rel="noreferrer"
+          >
+            Deep Dive Jokes App Tutorial
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
+            Remix Docs
+          </a>
+        </li>
       </ul>
-    </>
+    </div>
   );
 }
