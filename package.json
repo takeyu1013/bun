@@ -3,8 +3,5 @@
   "workspaces": [
     "backend",
     "frontend"
-  ],
-  "scripts": {
-    "ui": "bun x npm-check-updates -ui"
-  }
+  ]
 }
