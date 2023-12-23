@@ -7,6 +7,7 @@
     "ui": "bun x npm-check-updates -ui"
   },
   "dependencies": {
+    "@elysiajs/swagger": "^0.8.0",
     "elysia": "^0.8.3"
   },
   "devDependencies": {
