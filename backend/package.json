@@ -7,10 +7,10 @@
     "ui": "bun x npm-check-updates -ui"
   },
   "dependencies": {
-    "elysia": "latest"
+    "elysia": "^0.8.3"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "^1.0.19"
   },
   "module": "src/index.js"
 }

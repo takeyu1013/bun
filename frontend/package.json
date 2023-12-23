@@ -12,7 +12,7 @@
     "ui": "bun x npm-check-updates -ui"
   },
   "dependencies": {
-    "@elysiajs/eden": "^0.7.7",
+    "@elysiajs/eden": "^0.8.0",
     "@remix-run/css-bundle": "^2.4.1",
     "@remix-run/node": "^2.4.1",
     "@remix-run/react": "^2.4.1",
