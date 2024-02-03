@@ -1,7 +1,0 @@
-{
-  "name": "bun",
-  "workspaces": [
-    "backend",
-    "frontend"
-  ]
-}

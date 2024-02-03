@@ -1,24 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
   "name": "bun",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/javascript-node",
   "containerUser": "node",
-
   "runArgs": ["--rm", "--name=${localWorkspaceFolderBasename}"],
-  "mounts": [
-    {
-      "source": "${localEnv:HOME}/.gitconfig",
-      "target": "/home/node/.gitconfig",
-      "type": "bind"
-    },
-    {
-      "source": "${localEnv:HOME}/.git-credentials",
-      "target": "/home/node/.git-credentials",
-      "type": "bind"
-    }
-  ],
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
@@ -29,17 +16,12 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "bun install --no-save",
+  // "postCreateCommand": "yarn install",
 
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
-      "extensions": [
-        "seatonjiang.gitmoji-vscode",
-        "esbenp.prettier-vscode",
-        "csstools.postcss",
-        "bradlc.vscode-tailwindcss"
-      ],
+      "extensions": ["seatonjiang.gitmoji-vscode", "esbenp.prettier-vscode"],
       "settings": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
