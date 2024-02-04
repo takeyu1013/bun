@@ -13,6 +13,7 @@
   "dependencies": {
     "@remix-run/node": "^2.6.0",
     "@remix-run/react": "^2.6.0",
+    "@stylexjs/stylex": "^0.5.1",
     "http-server": "^14.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -32,6 +33,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "typescript": "^5.1.6",
     "vite": "^5.0.0",
+    "vite-plugin-stylex-dev": "^0.3.0",
     "vite-tsconfig-paths": "^4.2.1"
   },
   "engines": {
