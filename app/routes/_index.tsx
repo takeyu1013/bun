@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import { create, props } from "@stylexjs/stylex";
+import { Form } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,12 +8,34 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-const { h1 } = create({ h1: { fontWeight: "bold" } });
-
 export default function Index() {
   return (
     <div>
-      <h1 {...props(h1)}>Welcome to Remix (SPA Mode)</h1>
+      <h1>Remix Contacts</h1>
+      <div>
+        <Form role="search">
+          <input
+            aria-label="Search contacts"
+            placeholder="Search"
+            type="search"
+            name="q"
+          />
+          <div aria-hidden hidden={true} />
+        </Form>
+        <Form method="post">
+          <button type="submit">New</button>
+        </Form>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="/contacts/1">Your Name</a>
+          </li>
+          <li>
+            <a href="/contacts/2">Your Friend</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }
