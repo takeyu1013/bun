@@ -6,6 +6,9 @@
   "image": "mcr.microsoft.com/devcontainers/javascript-node",
   "containerUser": "node",
   "runArgs": ["--rm", "--name=${localWorkspaceFolderBasename}"],
+  "mounts": [
+    "source=${localEnv:HOME}/.netrc,target=/home/node/.netrc,type=bind,consistency=cached"
+  ],
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
