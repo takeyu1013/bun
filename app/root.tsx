@@ -1,4 +1,4 @@
-import { LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/node";
 import {
   Form,
   Links,
@@ -50,6 +50,7 @@ export default function App() {
             </ul>
           </nav>
         </div>
+
         <ScrollRestoration />
         <Scripts />
       </body>
