@@ -2,5 +2,10 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": { "ignore": ["devcontainer.json"] },
   "formatter": { "indentStyle": "space" },
+  "linter": {
+    "rules": {
+      "nursery": { "useImportType": "error" }
+    }
+  },
   "organizeImports": { "enabled": true }
 }
