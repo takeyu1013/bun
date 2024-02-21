@@ -1,19 +1,30 @@
 import type { LinksFunction } from "@remix-run/node";
 import {
   Form,
+  Link,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  json,
+  useLoaderData,
 } from "@remix-run/react";
 import href from "./app.css?url";
+import { getContacts } from "./data";
 
 export const links = (() => [
   { rel: "stylesheet", href },
 ]) satisfies LinksFunction;
 
+export const clientLoader = async () => {
+  const contacts = await getContacts();
+  return json({ contacts });
+};
+
 export default function App() {
+  const { contacts } = useLoaderData<typeof clientLoader>();
+
   return (
     <html lang="en">
       <head>
@@ -41,14 +52,26 @@ export default function App() {
             </Form>
           </div>
           <nav>
-            <ul>
-              <li>
-                <a href="/contacts/1">Your Name</a>
-              </li>
-              <li>
-                <a href="/contacts/2">Your Friend</a>
-              </li>
-            </ul>
+            {contacts.length ? (
+              <ul>
+                {contacts.map(({ id, first, last, favorite }) => (
+                  <li key={id}>
+                    <Link to={`contacts/${id}`}>
+                      {first || last ? (
+                        <>
+                          {first} {last}
+                        </>
+                      ) : (
+                        <i>No Name</i>
+                      )}{" "}
+                      {favorite ? <span>★</span> : null}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>No contacts</p>
+            )}
           </nav>
         </div>
         <div id="detail">
